@@ -9,7 +9,7 @@
 ## 0. 启动前置
 
 ```bash
-cd /Users/itwanger/Documents/GitHub/codecli
+cd /path/to/codecli
 mvn -q clean package -DskipTests
 ```
 

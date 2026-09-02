@@ -506,7 +506,7 @@ if (BrowserGuard.requiresPerCallApproval(toolName, argsJson)) {
 
 ```
 > /browser connect
-> 帮我看看 https://github.com/itwanger/<某个私有仓> 的 README 写了啥
+> 帮我看看 https://github.com/example-org/private-repo 的 README 写了啥
 ```
 
 **期望**：

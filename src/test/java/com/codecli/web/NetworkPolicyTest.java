@@ -56,7 +56,7 @@ class NetworkPolicyTest {
     @Test
     void allowsPublicHttps() {
         assertNull(policy.checkUrl("https://example.com/path"));
-        assertNull(policy.checkUrl("https://paicoding.com"));
+        assertNull(policy.checkUrl("https://example.com"));
     }
 
     @Test

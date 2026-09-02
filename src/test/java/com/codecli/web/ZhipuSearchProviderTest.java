@@ -66,13 +66,13 @@ class ZhipuSearchProviderTest {
                           "search_result": [
                             {
                               "title": "技术派 - PaiCoding",
-                              "link": "https://paicoding.com",
+                              "link": "https://example.com",
                               "content": "一个开源 Java 学习社区",
                               "publish_date": "2026-01-01"
                             },
                             {
                               "title": "CodeCLI 教程",
-                              "link": "https://paicoding.com/article/codecli",
+                              "link": "https://example.com/article/codecli",
                               "content": "从零打造 Java Agent CLI"
                             }
                           ],
@@ -86,8 +86,8 @@ class ZhipuSearchProviderTest {
         assertEquals(2, results.size());
         assertEquals(1, results.get(0).position());
         assertEquals("技术派 - PaiCoding", results.get(0).title());
-        assertEquals("paicoding.com", results.get(0).source());
-        assertEquals("https://paicoding.com/article/codecli", results.get(1).url());
+        assertEquals("example.com", results.get(0).source());
+        assertEquals("https://example.com/article/codecli", results.get(1).url());
 
         // 验证请求格式
         RecordedRequest req = server.takeRequest();

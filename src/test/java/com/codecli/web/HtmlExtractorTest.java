@@ -24,7 +24,7 @@ class HtmlExtractorTest {
                   <footer>© 2026</footer>
                 </body></html>
                 """;
-        HtmlExtractor.Extracted out = extractor.extract(html, "https://paicoding.com");
+        HtmlExtractor.Extracted out = extractor.extract(html, "https://example.com");
         assertEquals("技术派周刊", out.title());
         String md = out.markdown();
         assertTrue(md.contains("# 第 9 期"), "应包含 H1: " + md);
@@ -53,11 +53,11 @@ class HtmlExtractorTest {
     void rendersLinksAsMarkdown() {
         String html = """
                 <html><body><article>
-                  <p>访问 <a href="https://paicoding.com/about">技术派</a> 了解更多。</p>
+                  <p>访问 <a href="https://example.com/about">技术派</a> 了解更多。</p>
                 </article></body></html>
                 """;
-        String md = extractor.extract(html, "https://paicoding.com").markdown();
-        assertTrue(md.contains("[技术派](https://paicoding.com/about)"), md);
+        String md = extractor.extract(html, "https://example.com").markdown();
+        assertTrue(md.contains("[技术派](https://example.com/about)"), md);
     }
 
     @Test
