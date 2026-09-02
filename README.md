@@ -1,5 +1,10 @@
 # CodeCLI
 
+[![GitHub](https://img.shields.io/badge/GitHub-destin66--lab%2Fcodecli-181717?logo=github&logoColor=white)](https://github.com/destin66-lab/codecli)
+[![Java](https://img.shields.io/badge/Java-17-007396?logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+[![Maven](https://img.shields.io/badge/Maven-3.8+-C71A36?logo=apachemaven&logoColor=white)](https://maven.apache.org/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue)](LICENSE)
+
 一个成熟的 Java Agent CLI 产品，对标 Claude Code，从第一期的 `ReAct` 单代理循环逐步演进到第十六期的 `TUI 产品化`。
 
 当前进度：已完成第 16.1 期 inline 流式 TUI 形态修正、第 17 期 `LSP 诊断注入` MVP、第 18 期 `Git Side-History 快照与回滚` MVP、第 19 期 `Prompt 分层架构` MVP、第 20 期 `异步后台任务 + Runtime API` MVP、第 21 期 `图片复制粘贴输入` MVP、第 23 期 `微信 iLink 通道` 文本 MVP。
@@ -707,24 +712,7 @@ I
 
 ## 运行效果
 
-### 第一期：旧版启动效果
-
-```text
-╔══════════════════════════════════════════════════════════╗
-║                                                          ║
-║   ██████╗  █████╗ ██╗      ██████╗██╗     ██╗            ║
-║   ██╔══██╗██╔══██╗██║     ██╔════╝██║     ██║            ║
-║   ██████╔╝███████║██║     ██║     ██║     ██║            ║
-║   ██╔═══╝ ██╔══██║██║     ██║     ██║     ██║            ║
-║   ██║     ██║  ██║███████╗╚██████╗███████╗██║            ║
-║   ╚═╝     ╚═╝  ╚═╝╚══════╝ ╚═════╝╚══════╝╚═╝            ║
-║                                                          ║
-║              简单的 Java Agent CLI v1.0.0                ║
-║                                                          ║
-╚══════════════════════════════════════════════════════════╝
-```
-
-### 第三期：当前运行效果
+### 当前运行效果
 
 ```text
    ████████    CodeCLI π  v16.1.0

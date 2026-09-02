@@ -13,7 +13,7 @@ class HtmlExtractorTest {
     @Test
     void extractsArticleTagAsMain() {
         String html = """
-                <html><head><title>技术派周刊</title></head>
+                <html><head><title>CodeCLI 周刊</title></head>
                 <body>
                   <nav><a href="/">首页</a></nav>
                   <article>
@@ -25,7 +25,7 @@ class HtmlExtractorTest {
                 </body></html>
                 """;
         HtmlExtractor.Extracted out = extractor.extract(html, "https://example.com");
-        assertEquals("技术派周刊", out.title());
+        assertEquals("CodeCLI 周刊", out.title());
         String md = out.markdown();
         assertTrue(md.contains("# 第 9 期"), "应包含 H1: " + md);
         assertTrue(md.contains("web_search"), "应保留正文内容");
@@ -53,11 +53,11 @@ class HtmlExtractorTest {
     void rendersLinksAsMarkdown() {
         String html = """
                 <html><body><article>
-                  <p>访问 <a href="https://example.com/about">技术派</a> 了解更多。</p>
+                  <p>访问 <a href="https://example.com/about">示例站点</a> 了解更多。</p>
                 </article></body></html>
                 """;
         String md = extractor.extract(html, "https://example.com").markdown();
-        assertTrue(md.contains("[技术派](https://example.com/about)"), md);
+        assertTrue(md.contains("[示例站点](https://example.com/about)"), md);
     }
 
     @Test

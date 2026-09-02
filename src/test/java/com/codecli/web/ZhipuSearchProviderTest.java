@@ -65,7 +65,7 @@ class ZhipuSearchProviderTest {
                         {
                           "search_result": [
                             {
-                              "title": "技术派 - PaiCoding",
+                              "title": "Java 学习社区",
                               "link": "https://example.com",
                               "content": "一个开源 Java 学习社区",
                               "publish_date": "2026-01-01"
@@ -81,11 +81,11 @@ class ZhipuSearchProviderTest {
                         """));
 
         ZhipuSearchProvider provider = new ZhipuSearchProvider("test-key", "search_pro", client);
-        List<SearchResult> results = provider.search("技术派", 5);
+        List<SearchResult> results = provider.search("Java 学习", 5);
 
         assertEquals(2, results.size());
         assertEquals(1, results.get(0).position());
-        assertEquals("技术派 - PaiCoding", results.get(0).title());
+        assertEquals("Java 学习社区", results.get(0).title());
         assertEquals("example.com", results.get(0).source());
         assertEquals("https://example.com/article/codecli", results.get(1).url());
 
@@ -95,7 +95,7 @@ class ZhipuSearchProviderTest {
         assertEquals("Bearer test-key", req.getHeader("Authorization"));
         String body = req.getBody().readUtf8();
         assertTrue(body.contains("\"search_engine\":\"search_pro\""), body);
-        assertTrue(body.contains("\"search_query\":\"技术派\""), body);
+        assertTrue(body.contains("\"search_query\":\"Java 学习\""), body);
         assertTrue(body.contains("\"count\":5"), body);
     }
 

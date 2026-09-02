@@ -8,7 +8,7 @@ class SearchResultTest {
 
     @Test
     void of_extractsHostFromUrl() {
-        SearchResult r = SearchResult.of(1, "技术派", "https://example.com/article/1", "示例摘要");
+        SearchResult r = SearchResult.of(1, "CodeCLI", "https://example.com/article/1", "示例摘要");
         assertEquals(1, r.position());
         assertEquals("example.com", r.source());
         assertEquals("https://example.com/article/1", r.url());
